@@ -25,13 +25,13 @@
         var horas = parseFloat(document.getElementById("RHora").value);
         var vh = parseFloat(document.getElementById("Horas").value);
         var INSS = parseFloat(document.getElementById("Porcentagem").value);
-        var n_dependente = parseInt(document.getElementById("Dependente").value);
+        var n_dependente = parseInt(document.getElementById("Dependente do funcionario").value);
         valor_dependente = n_dependente * 75.00
         R1 = horas * vh;
 		var R2 = INSS / 100 
 		var R3 = (R1 * 0.95) + valor_dependente
             
-        alert('Salário Bruto = R$' + R1  + 'salario liquido' + R3);		
+        alert('Salário Bruto = R$' + R1  + 'salario liquido do funcionario' + R3);		
 	
 	    /* document.write('Salário Líquido = R$', R3); */		
 	}
