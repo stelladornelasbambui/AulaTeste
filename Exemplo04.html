@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>JavaScript</title>
+</head>
+<body>
+<form name="Formulario">
+  R$ por Hora: R$ 
+  <input id="RHora" type="text" name="RHora" size="10"><BR>Horas Trabalho:&nbsp; 
+  <input id = "Horas" type="text" name="Horas" size="5"><BR>Porcentagem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <input id ="Porcentagem" type="text" name="Porcentagem" size="3">% (INSS)<BR>Numero de dependentes: &nbsp;&nbsp;&nbsp;&nbsp;
+  <input id ="Dependente" type="text" name="Dependente" size="3"><p>&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <input type="submit" value="Salário Líquido..." name="Calcular" onclick="Calcula()"></p>
+</form>
+<Script Language="JavaScript">
+<!--
+	/* Script de Soma */	
+	s	
+	function Calcula() {
+        var horas = parseFloat(document.getElementById("RHora").value);
+        var vh = parseFloat(document.getElementById("Horas").value);
+        var INSS = parseFloat(document.getElementById("Porcentagem").value);
+        var n_dependente = parseInt(document.getElementById("Dependente").value);
+        valor_dependente = n_dependente * 75.00
+        R1 = horas * vh;
+		var R2 = INSS / 100 
+		var R3 = (R1 * 0.95) + valor_dependente
+            
+        alert('Salário Bruto = R$' + R1  + 'salario liquido' + R3);		
+	
+	    /* document.write('Salário Líquido = R$', R3); */		
+	}
+//-->
+</Script>
+</body>
+</html>

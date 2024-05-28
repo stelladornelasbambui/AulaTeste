@@ -1,0 +1,42 @@
+<!--Faça um script que pede duas notas de um aluno. Em seguida ele deve calcular
+     a média do aluno e      dar o seguinte resultado: 
+•	    A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+•	    A mensagem "Recuperacao", se a média for entre 5 e 6,9
+•	    A mensagem "Aprovado com Distinção", se a média for igual a dez.
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Curso JavaScript Progressivo</title>
+ </head>
+   
+   <form>
+   Nome do aluno:<input id="nome" type="text"> <br /><br />
+   Primeira nota <input id="nota1" type="text"> <br /><br />
+   Segunda  nota <input id="nota2" type="text"> <br /><br />
+   <button onclick="media()">Calcular M�dia</button>
+</form>
+   <script type="text/javascript">
+
+    function media(){
+     var nome = (document.getElementById("nome").value);
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+
+     var media = (nota1 + nota2)/2 ;
+
+     if(media >= 7)
+     
+       alert("o aluno: "+nome+ "Otima nota parabéns" + media);
+      else if (media > 5 && media<6,9)
+       alert("o aluno: "+nome+ "Recuperacao "+media);
+     else
+      alert("o aluno: "+nome+ "Reprovado!")
+
+    }
+ </script>
+
+
+</html>
+

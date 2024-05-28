@@ -1,0 +1,26 @@
+<!--Leia uma temperatura em graus celsius - após calcular e mostrar a mesma
+    temperatura em graus FAHRENHEIT 
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Exemplo 02</title>
+   <form>
+   Digite a temperatura em Celsius: <input id="celsius" type="text"> <br /><br />
+   
+   <button onclick="temperatura()">Calcular temperatura</button>
+</form>
+   <script type="text/javascript">
+
+    function temperatura(){
+     var temperatura_celsius = (document.getElementById("celsius").value);
+     var resultado = (temperatura_celsius * 1.8) + 32 ;
+     alert ('FAHRENHEIT ' + resultado)
+  
+    }
+ </script>
+
+ </head>
+</html>
+
